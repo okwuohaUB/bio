@@ -12,7 +12,7 @@
 
             <div class="col" style="width: auto; padding: 10px; margin: 10px;">
                 
-                <h5>Okwuoha Uche Bethel <br /> <span style="font-size: 10px; letter-spacing: 1px;"> { Aspiring Full-stack Engineer }  </span> </h5>
+                <h4>Okwuoha Uche Bethel <br /> <span style="font-size: 10px; letter-spacing: 1px;"> { Aspiring Full-stack Engineer }  </span> </h4>
             </div>
             <div
             class="col"             
@@ -45,34 +45,34 @@
                  </a>
                 </div>           
         </div>
-        <section id="home">
-        <div class="row home_section">
+        <section id="home" class="section">
+        <div class="row home_section element">
             <div class="col-sm-4">            
             <image src="images/me.png" class="profile-img"/>
             
             </div>
-            <div class="col-sm-8 home-ideas">I turn dreams into realities </div>
+            <div class="col-sm-8 home-ideas">I turn dreams into realities. </div>
         </section>
 
-        <section id="about">
+        <section id="about" class="section">
 
             <div class="row about_section">           
                
                 <div class="col-2">
                     <h1 style="border-bottom: solid 5px tomato; padding: 10px;"> About Me </h1> </div>
                 <div class="col-6">
+                    <br /><br />
                     I'm a full-stack developer who loves building end-to-end web applications — from crafting intuitive, responsive user interfaces to designing robust backend systems and APIs. I'm comfortable across the stack, working with modern frameworks and tools to turn ideas into scalable, production-ready products.
 
 I care about clean code, thoughtful architecture, and solving real problems. Whether I'm optimizing database queries, building seamless APIs, or refining the user experience, I focus on delivering solutions that are both performant and maintainable.
 
-Currently, I'm eager to collaborate on challenging projects and continue growing as a developer. When I'm not coding, I
-you will catch me exploring new tech, singing, watching movies or playnig soccer.
+Currently, I'm eager to collaborate on challenging projects and continue growing as a developer. When I'm not coding, you will catch me exploring new tech, singing, watching movies or playnig soccer.
                 </div>
             </div>           
         
         </section>           
 
-      <section id="skills">
+      <section id="skills" class="section">
 
         <div class="row skills_section">
             
@@ -81,6 +81,7 @@ you will catch me exploring new tech, singing, watching movies or playnig soccer
             </div>
 
             <div class="col-6">
+                <br /><br />
                 I work daily with TypeScript, React, and Next.js on the frontend, and Node.js with PostgreSQL on the backend. I'm comfortable designing schemas, building REST and GraphQL APIs, and deploying to AWS with Docker. I treat the full stack as one system — not two separate jobs — which means I think about data flow, performance, and maintainability from the first line of code to the last pixel.
             </div>
 
@@ -88,7 +89,7 @@ you will catch me exploring new tech, singing, watching movies or playnig soccer
         
         </section>
 
-        <section id="tools">
+        <section id="tools" class="section">
 
             <div class="row tools_section">
 
@@ -98,7 +99,7 @@ you will catch me exploring new tech, singing, watching movies or playnig soccer
                 </div>
             
                 <div class="col-9">
-                    <br /><br /><br />
+                    <br /><br />
 
                     <h6>Here are the tools I work with daily:</h6><br />
                 
@@ -128,22 +129,24 @@ Cloud: AWS, Azure, GCP</li>
         
         </section>
 
-        <section id="projects">
+        <section id="projects" class="section">
 
             <div class="row projects_section">
             <div class="col-2">
                 <h1 style="border-bottom: solid 5px tomato; padding: 10px;"> Projects </h1>
             </div>
-            <div class="col-6 projects-msg"> I built this app using only HTML, CSS(bootstrap) and vanilla JavaScript.
+            <div class="col-6 projects-msg"> 
+                
+                I built this app using only HTML, CSS(bootstrap) and vanilla JavaScript.
             </div>
             </div>
         
         </section>
 
-        <section id="contact">
+        <section id="contact" class="section">
 
             <div class="row contact_section">
-            <div class="col-2">
+            <div class="col-3">
                 <h1 style="border-bottom: solid 5px MediumSeaGreen; padding: 10px;"> Contact me</h1> 
                 <br /><br />
               
@@ -160,15 +163,13 @@ Cloud: AWS, Azure, GCP</li>
 
             </div>
             <div class="col-8">
-                <br /><br /><br />
+                <br /><br />
                 <h5>Drop a message for me</h5>
                 <form action="/action_page.php">
-  <label for="fname">First name:</label><br>
-  <input type="text" id="fname" name="fname" placeholder="John"><br>
-  <label for="lname">Last name:</label><br>
-  <input type="text" id="lname" name="lname" placeholder="Doe"><br><br>
+  <label for="fname">Your  name:</label><br>
+  <input type="text" id="fname" name="fname" placeholder="e.g: Afuonu John"><br>
    <label for="lname"> Email:</label><br>
-  <input type="text" id="email" name="email" placeholder="johnDoe@example.com"><br><br>
+  <input type="text" id="email" name="email" placeholder="e.g: afuonujohn@gmail.com"><br><br>
   <label for="message"> Message:</label><br>
 
   <textarea name="message" rows="7" cols="30">
@@ -177,7 +178,7 @@ Cloud: AWS, Azure, GCP</li>
 
   <input type="submit" value="Submit" class="btn btn-primary">
 </form> 
-
+<br /><br />
             </div>
 
             </div>
@@ -187,6 +188,21 @@ Cloud: AWS, Azure, GCP</li>
         </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>   
+
+
+        
+        <script>
+            document.querySelectorAll('nav a').forEach(link => {
+  link.addEventListener('click', e => {
+    const target = document.querySelector(link.getAttribute('href'));
+    if (target) {
+      target.style.animation = 'none';
+      target.offsetHeight; // force reflow
+      target.style.animation = '';
+    }
+  });
+});   
+            </script>
      </div>
     </body>
 </html>

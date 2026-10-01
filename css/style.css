@@ -2,7 +2,7 @@
     
     color:#fff;
     margin: 0px;
-    font-family: cursive;
+    font-family: cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 /* Standard (Firefox + modern browsers) */
@@ -156,3 +156,37 @@ textarea{
   background: #000;
   border-radius: 4px;
 }   
+
+
+/**********CSS animations **********/
+@keyframes slideLeftAnimation {
+  0% { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0); opacity: 1; }
+}
+
+/*
+.element {
+  animation-name: slideLeftAnimation;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-fill-mode: both;
+}
+*/
+
+/* Hidden by default */
+.section {
+  opacity: 0;
+}
+
+/* Animation fires when the section is clicked into */
+.section:target {
+  animation: slideLeftAnimation 1.5s ease-in both;
+}
+
+/* Your keyframes, unchanged */
+@keyframes slideLeftAnimation {
+  0%   { transform: translateX(-100px); opacity: 0; }
+  100% { transform: translateX(0);      opacity: 1; }
+}
